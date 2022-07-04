@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout" layout:decorate="~{layouts/default_layout}">
+
+<!-- index.html 고유 CSS 추가 -->
+<th:block layout:fragment="css">
+
+</th:block>
+<!-- index.html 고유 스크립트 추가 -->
+<th:block layout:fragment="script">
+
+</th:block>
+
+<!-- Content -->
+<th:block layout:fragment="content">
+	<div id="container">
+		<div class="main_rolling_pc">
+			<div class="visualRoll">
+				<ul class="viewImgList">
+					<li class="imglist0">
+						<div class="roll_content">
+							<a href="javascript:;">
+								<img src="img/IT Convergence3.png" alt="YoungEnbics"></a>
+						</div>
+					</li>
+					<li class="imglist1">
+						<div class="roll_content">
+							<a href="javascript:;">
+								<img src="img/IT Convergence3.png" alt="YoungEnbics"></a>
+						</div>
+					</li>
+					<li class="imglist2">
+						<div class="roll_content">
+							<a href="javascript:;">
+								<img src="img/IT Convergence3.png" alt="YoungEnbics"></a>
+						</div>
+					</li>
+				</ul>
+
+				<div class="rollbtnArea">
+					<ul class="rollingbtn">
+						<li class="seq butt0"><a href="#butt"><img src="img/btn_rollbutt_on.png" alt="1번" /></a>
+						</li>
+						<li class="seq butt1"><a href="#butt"><img src="img/btn_rollbutt_off.png" alt="2번" /></a>
+						</li>
+						<li class="seq butt2"><a href="#butt"><img src="img/btn_rollbutt_off.png" alt="3번" /></a>
+						</li>
+						<li class="rollstop"><a href="#" class="stop"><img src="img/btn_roll_stop.png" alt="멈춤" /></a>
+						</li>
+						<li class="rollplay"><a href="#" class="play"><img src="img/btn_roll_play.png" alt="재생" /></a>
+						</li>
+					</ul>
+				</div><!-- //rollbtnArea -->
+
+			</div><!-- //visualRoll -->
+		</div><!-- //main_rolling_pc -->
+
+		<div class="main_rolling_mobile">
+			<div class="swiper-container">
+				<div class="swiper-wrapper">
+					<div class="swiper-slide main_rollimg0_mobile">
+						<a href="javascript:;"><img src="img/IT Convergence3.png" alt="YoungEnbics" /></a>
+					</div>
+					<div class="swiper-slide main_rollimg1_mobile">
+						<a href="javascript:;"><img src="img/IT Convergence3.png" alt="YoungEnbics" /></a>
+					</div>
+					<div class="swiper-slide main_rollimg2_mobile">
+						<a href="javascript:;"><img src="img/IT Convergence3.png" alt="YoungEnbics" /></a>
+					</div>
+				</div>
+				<div class="swiper-pagination"></div>
+				<!-- <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div> -->
+
+			</div>
+			<!--//swiper-container-->
+		</div>
+		<!--//main_rolling_mobile -->
+
+		<!-- about_area -->
+		<div class="about_area">
+			<h2>Business</b></h2>
+			<div class="about_box">
+				<ul class="place_list box_inner clear">
+					<li class="rounded"><a href="#"
+							onclick="$('.popup_base').css('height',$(document).height());$('.program_pop').show();">
+							<img class="img_topplace" src="img/environmental_340-328.jpg" alt="Environment" />
+							<h3>Environment</h3>
+						</a>
+						<p class="txt"></p>
+						<span class="view"><a href="/sanupdanji.do">VIEW</a></span>
+
+					</li>
+					<li class="rounded"><a href="#"
+							onclick="$('.popup_base').css('height',$(document).height());$('.space_pop').show();">
+							<img class="img_topplace" src="img/hexagon_340-328.jpg" alt="NanoTechnology" />
+							<h3>NanoTechnology</h3>
+						</a>
+						<p class="txt"></p>
+						<span class="view"><a href="/sanupdanji.do">VIEW</a></span>
+
+					</li>
+					<li class="rounded"><a href="#"
+							onclick="$('.popup_base').css('height',$(document).height());$('.contact_pop').show();">
+							<img class="img_topplace" src="img/bacteria-340-328.png" alt="BioTechnology" />
+							<h3>BioTechnology</h3>
+						</a>
+						<p class="txt"></p>
+						<span class="view"><a href="/sanupdanji.do">VIEW</a></span>
+
+					</li>
+					<li><a href="#"
+							onclick="$('.popup_base').css('height',$(document).height());$('.program_pop').show();">
+							<img class="img_topplace" src="img/books_340-328.jpg" alt="Culture" />
+							<h3>Culture</h3>
+						</a>
+						<p class="txt"></p>
+						<span class="view"><a href="/sanupdanji.do">VIEW</a></span>
+
+					</li>
+					<li><a href="#"
+							onclick="$('.popup_base').css('height',$(document).height());$('.program_pop').show();">
+							<img class="img_topplace" src="img/astronaut_340-328.jpg" alt="Space" />
+							<h3>Space</h3>
+						</a>
+						<p class="txt"></p>
+						<span class="view"><a href="/sanupdanji.do">VIEW</a></span>
+
+					</li>
+				</ul>
+			</div>
+		</div>
+		<h2 class="hdd">빠른 링크 : 전화 문의,오시는 길,꼭대기로</h2>
+		<div class="quick_area">
+			<ul class="quick_list">
+				<li><a href="tel:010-2584-5616">
+						<h3>전화 문의</h3>
+						<p>010-2584-5616</p>
+					</a></li>
+				<!--<li><a href="javascript:;"><h3>카카오톡 <em>상담</em></h3><p>1:1상담</p></a></li>-->
+				<li><a href="http://kko.to/KkUHTXH4f" target="_black">
+						<h3 class="to_contact">오시는 길</h3>
+					</a></li>
+			</ul>
+			<p class="to_top"><a href="#layout0" class="s_point">TOP</a></p>
+		</div>
+		<script type="text/javascript">
+			$(document).ready(function () {
+				var swiper = new Swiper('.swiper-container', {
+					loop: true,
+					autoplay: 5500,
+					autoplayDisableOnInteraction: false,
+					pagination: '.swiper-pagination',
+					paginationClickable: true
+				});
+			});
+		</script>
+		<!-- //about_area -->
+
+		<!-- app_area -->
+		<!--			<div class="appbbs_area">
+				<div class="appbbs_box box_inner clear">
+					<h2 class="hdd">최근게시물</h2>
+					<p class="app_line">
+						<a href="javascript:;">카카오톡 1:1 상담</a>
+						<a href="javascript:;">전화 상담 신청</a>
+					</p>
+					<div class="bbs_line">
+						<h3>NOTICE</h3>
+						<ul class="notice_recent">
+							<li><a href="javascript:;"></a></li>
+							<li><a href="javascript:;"></a></li>
+							<li><a href="javascript:;"></a></li>
+							<li><a href="javascript:;"></a></li>
+							<li><a href="javascript:;"></a></li>
+						</ul>
+					</div>
+				</div>
+			</div>-->
+		<!-- //app_area -->
+
+	</div>
+	<!-- //container -->
+</th:block>
+
+</html>

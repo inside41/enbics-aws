@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lagn="ko" xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+
+<head>
+	<title> YoungEnbics Inc. </title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<!-- content script -->
+	<link rel="stylesheet" href="css/swiper.min.css">
+	<link rel="stylesheet" href="css/common.css">
+	<th:block layout:fragment="css"></th:block>
+	<!-- content script -->
+	<script src="js/jquery-1.11.3.min.js"></script>
+	<script src="js/rollmain.js"></script>
+	<script src="js/jquery.easing.js"></script>
+	<script src="js/common.js"></script>
+	<script src="js/jquery.smooth-scroll.min.js"></script>
+	<script type="text/javascript" src="js/swiper.min.js"></script>
+	<th:block layout:fragment="script"></th:block>
+</head>
+
+<body>
+	<ul class="skipnavi">
+		<li><a href="#container">본문내용</a></li>
+	</ul>
+	<div class="wrap">
+		<!-- header fragment 사용 -->
+		<th:block th:replace="fragments/header :: headerFragment"></th:block>
+		<!-- content fragment 사용 -->
+		<th:block layout:fragment="content"></th:block>
+		<!-- footer fragment 사용 -->
+		<th:block th:replace="fragments/footer :: footerFragment"></th:block>
+	</div>
+</body>
+
+</html>

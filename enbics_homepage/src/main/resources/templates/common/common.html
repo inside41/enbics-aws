@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<link rel="stylesheet" href="css/swiper.min.css">
+	<link rel="stylesheet" href="css/common.css">
+	<link rel="stylesheet" th:href="@{/css/style.css}" />
+	<link rel="stylesheet" th:href="@{/css/style_pagination.css}" />
+	<link rel="stylesheet" th:href="@{/plugin/mCustomScrollbar/jquery.mCustomScrollbar.min.css}" />
+	<script src="js/jquery-1.11.3.min.js"></script>
+	<script src="js/rollmain.js"></script>
+	<script src="js/jquery.easing.js"></script>
+	<script src="js/common.js"></script>
+	<script src="js/jquery.smooth-scroll.min.js"></script>
+	<meta http-equiv="refresh" content="60" />
+	<title>YoungEnbics</title>
+</head>
+<body>
+<nav th:fragment="pagination" th:if="${params != null and params.paginationInfo.totalRecordCount > 0}"
+	th:object="${params.paginationInfo}" th:with="info=${params.paginationInfo}" aria-label="Page navigation"
+	class="text-center">
+	<ul class="pagination">
+		<li th:if="*{hasPreviousPage == true}"
+			th:onclick="movePage([[ ${#request.requestURI} ]], [[ ${params.makeQueryString(1)} ]])">
+			<a href="javascript:void(0)" aria-label="Previous"><span aria-hidden="true">&laquo;</span></a>
+		</li>
+		<li th:if="*{hasPreviousPage == true}"
+			th:onclick="movePage([[ ${#request.requestURI} ]], [[ ${params.makeQueryString(info.firstPage - 1)} ]])">
+			<a href="javascript:void(0)" aria-label="Previous"><span aria-hidden="true">&lsaquo;</span></a>
+		</li>
+		<li th:each="pageNo : *{#numbers.sequence( firstPage, lastPage )}"
+			th:class="${pageNo == params.currentPageNo} ? 'active'">
+			<a href="javascript:void(0)" th:text="${pageNo}"
+				th:onclick="movePage([[ ${#request.requestURI} ]], [[ ${params.makeQueryString(pageNo)} ]])"></a>
+		</li>
+		<li th:if="*{hasNextPage == true}"
+			th:onclick="movePage([[ ${#request.requestURI} ]], [[ ${params.makeQueryString(info.lastPage + 1)} ]])">
+			<a href="javascript:void(0)" aria-label="Next"><span aria-hidden="true">&rsaquo;</span></a>
+		</li>
+		<li th:if="*{hasNextPage == true}"
+			th:onclick="movePage([[ ${#request.requestURI} ]], [[ ${params.makeQueryString(info.totalPageCount)} ]])">
+			<a href="javascript:void(0)" aria-label="Next"><span aria-hidden="true">&raquo;</span></a>
+		</li>
+	</ul>
+</nav>
+<script th:src="@{/scripts/jquery.min.js}"></script>
+<script th:src="@{/plugin/bootstrap/js/bootstrap.min.js}"></script>
+<script th:src="@{/plugin/mCustomScrollbar/jquery.mCustomScrollbar.concat.min.js}"></script>
+<script th:src="@{/scripts/main.js}"></script>
+<script th:src="@{/scripts/common.js}"></script>
+<script src="js/jquery-1.11.3.min.js"></script>
+<script src="js/rollmain.js"></script>
+<script src="js/jquery.easing.js"></script>
+<script src="js/common.js"></script>
+<script src="js/jquery.smooth-scroll.min.js"></script>
+</body>
+</html>

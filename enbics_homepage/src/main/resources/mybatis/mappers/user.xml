@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+      PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+   "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.enbics.member.dao.UserDAO"> 
+ 
+   <select id="selectUser" parameterType="string" resultType="int">
+      <![CDATA[
+			SELECT idtb_user FROM tb_user WHERE user_id = #{userID}
+      ]]>
+   </select>
+   
+   <insert id="insertUser" parameterType="com.enbics.vo.UserVO">
+      <![CDATA[
+			INSERT INTO tb_user(user_id,user_pw,user_company) 
+			VALUES (#{user_id},#{user_pw},#{user_company})
+      ]]>
+   </insert>
+   
+   <insert id="insertAuthorities" parameterType="com.enbics.vo.AuthoritiesVO">
+      <![CDATA[
+			INSERT INTO tb_authorities(user_idtb,user_authorities)
+			VALUES (#{user_idtb},#{user_authorities})
+      ]]>
+   </insert>
+   
+   
+   
+   <update id="deleteUser" parameterType="com.enbics.vo.UserVO">
+      <![CDATA[
+			UPDATE tb_user SET enable = '2' WHERE user_id = #{user_id}
+      ]]>
+   </update>
+   
+</mapper>

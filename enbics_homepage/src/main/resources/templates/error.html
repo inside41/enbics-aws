@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout" layout:decorate="~{layouts/default_layout}">
+
+<!-- index.html 고유 CSS 추가 -->
+<th:block layout:fragment="css">
+
+</th:block>
+<!-- index.html 고유 스크립트 추가 -->
+<th:block layout:fragment="script">
+
+</th:block>
+
+<!-- Content -->
+<th:block layout:fragment="content">
+	<div id="container" class="box_inner error_div">
+			<h2>존재하지 않는 페이지 입니다.</h2>
+			<p><a href="/main.do">메인페이지로</a></p>
+	</div>
+</th:block>
+
+</html>
