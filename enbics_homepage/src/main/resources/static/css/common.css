@@ -129,8 +129,9 @@ header {position:absolute; left:0; top:0; width:100%; height:113px; background:r
 header .header_area {/*position:relative;*/}
 header .header_area h1 {float:left; padding:40px 0 0;}
 header .header_area h1 a {display:black; width:270px; height:71px; font-size: 30px; color:white; /*text-indent:-9999px; overflow:hidden; background:url(../img/logo_enbics2.png) no-repeat;*/}
+header .header_area h1 img {position:relative; width: 150px; height: 67px; top:-9px;}
 header .header_area .openMOgnb {display:none;}
-.header_cont {float:right; width:780px;}
+.header_cont {float:right;}
 .header_cont .util {text-align: right; padding-top:10px;}
 .header_cont .util li {display:inline;}
 .header_cont .util li:after {content:"|"; display:inline-block; padding:0 10px; font-size:10px; color:#eee; position:relative; top:-2px;}
@@ -364,7 +365,7 @@ h1.loginTit a img {width:100%;}
 @media all and (max-width:1065px) and (min-width:801px) {			/* ipad가로, ipadPro가로세로, gallexyTab가로 */
 	.box_inner {width:100%;}	
     header .header_area h1 {padding-left:20px;}
-	.header_cont {float:right; width:60%; padding-right:20px;}		/* gnb 간격 줄임 */
+	.header_cont {float:right; padding-right:20px;}		/* gnb 간격 줄임 */
 	.header_cont .gnb li a {padding:26px 25px;}
 	.gnb_depth .submenu_list {width:100%; padding-left:52%;}
     .gnb_depth .submenu_list li a {padding:20px;}                  /* 없으면 395행을 따르게 됨 */
@@ -394,7 +395,7 @@ h1.loginTit a img {width:100%;}
 	header {height:90px; text-align:center; z-index:200; background:rgba(0,0,0,0.5);}
 	header.on {background:#31353d;}
 	header .header_area h1 {float:none; width:100%; height:50px; text-align:center; padding:35px 0 0;}
-	header .header_area h1 a {display:inline-block; width:180px; height:23px; background-size:180px 23px;}
+	header .header_area h1 a {position:relative; width:180px; height:23px; background-size:180px 23px; top:-8px;}
 	header .header_area .openMOgnb {display:block; position:absolute; left:15px; top:35px; width:23px; height:16px;}
 	header .header_area .openMOgnb span {box-sizing:border-box; display:block; width:25px; height:3px; margin-bottom:4px; border-radius:10px; background:#fff;}
 	header .header_area .openMOgnb span + span {width:17px;}
